@@ -1,0 +1,129 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Style for the title */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Style for the button grid */
+#button-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style for individual buttons */
+.letter-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hover effect for buttons */
+.letter-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Active button effect */
+.letter-btn:active {
+    background-color: #388e3c;
+}
+
+/* Style for the example display */
+#example {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style for the firework effect */
+.firework {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff9800;
+    animation: firework-animation 1s ease-in-out;
+}
+
+@keyframes firework-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Style for the example image */
+#example img {
+    margin-top: 10px;
+    border-radius: 10px;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+}
+
+/* Style for the placeholder image */
+.placeholder {
+    background-color: #f3f3f3;
+    color: #ccc;
+    text-align: center;
+    padding: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style for the page layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    #button-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .letter-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+.img {
+    max-width: 100%;
+    height: auto;
+}
